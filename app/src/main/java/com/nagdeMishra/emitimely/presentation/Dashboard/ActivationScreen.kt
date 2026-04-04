@@ -3,19 +3,19 @@ package com.nagdeMishra.emitimely.presentation.activation
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.nagdeMishra.emitimely.Presentation.Dashboard.FooterSection
-import com.nagdeMishra.emitimely.Presentation.Dashboard.LogoSection
-import com.nagdeMishra.emitimely.Presentation.Dashboard.PermissionTitle
-import com.nagdeMishra.emitimely.Presentation.Dashboard.TitleSection
+import androidx.navigation.NavController
+import com.nagdeMishra.emitimely.presentation.Dashboard.FooterSection
+import com.nagdeMishra.emitimely.presentation.Dashboard.LogoSection
+import com.nagdeMishra.emitimely.presentation.Dashboard.PermissionTitle
+import com.nagdeMishra.emitimely.presentation.Dashboard.TitleSection
 
 @Composable
-fun ActivationScreen() {
+fun ActivationScreen(navController: NavController) {
 
     LazyColumn(
         modifier = Modifier
@@ -47,7 +47,7 @@ fun ActivationScreen() {
 
         item { Spacer(modifier = Modifier.height(24.dp)) }
 
-        item { ActivateButton() }
+        item { ActivateButton(navController) }
 
         item { Spacer(modifier = Modifier.height(16.dp)) }
 

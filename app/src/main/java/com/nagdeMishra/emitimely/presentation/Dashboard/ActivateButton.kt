@@ -11,12 +11,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import com.nagdeMishra.emitimely.navigation.Routes
 
 @Composable
-fun ActivateButton() {
+fun ActivateButton(navController: NavController) {
 
     Button(
-        onClick = {},
+        onClick = {
+            navController.navigate(Routes.REGISTRATION)
+        },
         modifier = Modifier
             .fillMaxWidth()
             .height(56.dp),

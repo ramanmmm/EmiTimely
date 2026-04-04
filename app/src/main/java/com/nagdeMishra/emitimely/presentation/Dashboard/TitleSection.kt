@@ -1,4 +1,4 @@
-package com.nagdeMishra.emitimely.Presentation.Dashboard
+package com.nagdeMishra.emitimely.presentation.Dashboard
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
