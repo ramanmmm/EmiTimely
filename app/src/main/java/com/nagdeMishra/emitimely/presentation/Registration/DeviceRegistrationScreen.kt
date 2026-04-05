@@ -14,9 +14,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import com.nagdeMishra.emitimely.navigation.Routes
 
 @Composable
-fun DeviceRegistrationScreen() {
+fun DeviceRegistrationScreen(navController: NavController) {
 
     var deviceModel by remember { mutableStateOf("") }
     var androidVersion by remember { mutableStateOf("") }
@@ -72,7 +74,10 @@ fun DeviceRegistrationScreen() {
         Spacer(modifier = Modifier.height(16.dp))
 
         Button(
-            onClick = { },
+            onClick = {
+                navController.navigate(Routes.EMI_GUARD) {
+                popUpTo(Routes.REGISTRATION) { inclusive = true }
+            }},
             modifier = Modifier
                 .fillMaxWidth()
                 .height(56.dp),
