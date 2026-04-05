@@ -5,9 +5,13 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.nagdeMishra.emitimely.presentation.activation.ActivationScreen
+import com.nagdeMishra.emitimely.presentation.emiguard.EmiGuardScreen
+import com.nagdeMishra.emitimely.presentation.registration.DeviceRegistrationScreen
 
 object Routes {
     const val ACTIVATION = "activation"
+    const val REGISTRATION = "registration"
+    const val EMI_GUARD = "emi_guard"
 }
 
 @Composable
@@ -19,7 +23,13 @@ fun AppNavGraph(navController: NavHostController) {
     ) {
 
         composable(Routes.ACTIVATION) {
-            ActivationScreen()
+            ActivationScreen(navController)
+        }
+        composable(Routes.REGISTRATION) {
+            DeviceRegistrationScreen(navController)
+        }
+        composable(Routes.EMI_GUARD) {
+            EmiGuardScreen()
         }
 
     }
